@@ -21,6 +21,8 @@
 2. 在 `metadata.tex` 填写中英文题目、姓名、导师与专业信息，在 `chapters/` 和 `frontmatter/` 写正文与摘要，在 `references/references.bib` 管理文献。
 3. 使用 **XeLaTeX** 编译 `main.tex`。示例姓名为张三、导师为诸葛亮；专业字段按本人学籍及入学当年培养方案填写。
 
+Overleaf 已验证 TeX Live 2025 / 2026。首次编译若超时，保留缓存再次点击 **Recompile**；持续超时时可在 **Settings → Compiler** 选择 TeX Live 2025 后重新编译。
+
 | 文件 | 内容 |
 | --- | --- |
 | `metadata.tex` | 中英文封面信息 |
