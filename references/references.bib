@@ -1,0 +1,56 @@
+@comment{正式文献库：仅添加本人实际阅读并在正文引用的文献。
+使用 BibTeX 标准字段：author、title、year、journal、volume、number、pages、doi。
+英文作者用 Family, Given，多个作者用 and 分隔；不要把 et al. 写成作者。
+中文机构作者需加双层花括号，例如 author = {{同济大学研究生院}}。
+期刊 article；图书 book；会议 inproceedings；学位论文 phdthesis 或 mastersthesis；
+标准 standard；网页 online。网页填写 url、urldate 及真实发布/更新日期 date。
+页码范围写 123--135；doi 仅填 10.xxxx/xxxxx，不重复填写 DOI URL。
+英文标题中的专名和化学缩写用花括号保护，例如 {COD}、{pH}。
+不要编造作者、年份、页码或 DOI；从文献管理软件导入后核对原文。
+正文使用 \supercite{文献键}。未被引用的条目不会自动出现在 PDF 中。
+}
+
+@online{tongji2025guide,
+  author = {{同济大学研究生院}},
+  title = {同济大学研究生学位论文写作指南},
+  date = {2025-10-31},
+  url = {https://gs.tongji.edu.cn/info/1063/1754.htm},
+  urldate = {2026-10-03}
+}
+@online{tongji2026degree,
+  author = {{同济大学研究生院}},
+  title = {关于做好我校2026年学位授予审核工作的通知},
+  date = {2026-04-02},
+  url = {https://gs.tongji.edu.cn/info/1063/3461.htm},
+  urldate = {2026-10-03}
+}
+
+% 图书、标准和期刊论文示例；根据正式正文引用选择和替换。
+@book{metcalf2014,
+  author = {{Metcalf \& Eddy, Inc.} and Tchobanoglous, George and Stensel, H. David and Tsuchihashi, Ryujiro and Burton, Franklin L.},
+  title = {Wastewater Engineering: Treatment and Resource Recovery},
+  edition = {5},
+  location = {New York},
+  address = {New York},
+  publisher = {McGraw-Hill Education},
+  year = {2014},
+  isbn = {9780073401188}
+}
+@standard{gb50014,
+  author = {{中华人民共和国住房和城乡建设部}},
+  title = {室外排水设计标准: {GB 50014-2021}},
+  location = {北京},
+  address = {北京},
+  publisher = {中国计划出版社},
+  year = {2021}
+}
+@article{mulder1995,
+  author = {Mulder, A. and van de Graaf, A. A. and Robertson, L. A. and Kuenen, J. G.},
+  title = {Anaerobic ammonium oxidation discovered in a denitrifying fluidized bed reactor},
+  journal = {FEMS Microbiology Ecology},
+  year = {1995},
+  volume = {16},
+  number = {3},
+  pages = {177--184},
+  doi = {10.1111/j.1574-6941.1995.tb00281.x}
+}

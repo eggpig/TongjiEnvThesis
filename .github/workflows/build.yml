@@ -1,0 +1,39 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Compile examples
+        uses: xu-cheng/latex-action@v4
+        with:
+          texlive_version: 2026
+          root_file: |
+            main.tex
+            blind.tex
+            print.tex
+            spine.tex
+            biber.tex
+          latexmk_use_xelatex: true
+          args: -xelatex -halt-on-error -interaction=nonstopmode -file-line-error -outdir=build
+      - name: Check logs and source package
+        run: |
+          python3 scripts/check_build.py build
+          python3 scripts/package.py
+      - name: Upload examples
+        uses: actions/upload-artifact@v6
+        with:
+          name: TongjiEnvThesis
+          path: |
+            build/*.pdf
+            dist/TongjiEnvThesis-Overleaf.zip

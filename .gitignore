@@ -1,0 +1,25 @@
+# Build products
+/build/
+/dist/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+/main.pdf
+/blind.pdf
+/print.pdf
+/spine.pdf
+/biber.pdf
+*.ttf
+*.otf
+/signed/*.pdf
+.DS_Store
+__pycache__/

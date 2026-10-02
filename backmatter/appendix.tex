@@ -1,0 +1,22 @@
+% 附录为可选部分；不需要时可同时注释 main.tex 的 startappendices 和 input 两行。
+% 编号由类文件自动生成：附录 A、B……；公式、图、表 A1、A2……，不手写编号。
+\chapter{补充材料}
+附录用于列示补充试验记录、计算过程、参数表或其他与论文相关的材料。各附录应分别设置标题，并在正文中给出必要的引用。
+\begin{equation}
+ V=Qt
+ \label{eq:appendix-volume}
+\end{equation}
+式中，$V$、$Q$与$t$分别为体积、体积流量和时间，其单位应保持一致。
+% 下表和图框用于提供附录格式；实际无对应材料时删除。
+\begin{table}[htbp]
+\caption{补充记录表}\label{tab:appendix}
+\centering\tjsmall
+\begin{tabularx}{\textwidth}{@{}lXX@{}}\toprule
+记录编号&记录内容&来源\\\midrule
+—&—&—\\\bottomrule
+\end{tabularx}
+\end{table}
+\begin{figure}[htbp]
+\centering\fbox{\parbox[c][15mm][c]{.7\textwidth}{\centering 补充图}}
+\caption{补充图}\label{fig:appendix}
+\end{figure}

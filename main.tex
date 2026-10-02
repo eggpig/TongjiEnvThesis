@@ -1,0 +1,28 @@
+% !TeX program = xelatex
+% Overleaf: Compiler = XeLaTeX; Main document = main.tex.
+% 日常写作：直接编译本文件。格式依据：学校 2025 年 10 月指南。
+% 隐名辅助版：编译 blind.tex；纸质打印版：编译 print.tex。
+% 可选参数：fontset=auto/open/school；bibbackend=bibtex/biber。
+\documentclass{tongji-env-master}
+\input{metadata}
+\begin{document}
+\makecovers
+\frontmatter
+\input{frontmatter/abstract-cn}
+\input{frontmatter/abstract-en}
+\tableofcontents
+\input{frontmatter/symbols} % 符号较少时可注释。
+\mainmatter
+\input{chapters/01-introduction}
+\input{chapters/02-materials-methods}
+\input{chapters/03-results-discussion}
+\input{chapters/04-engineering-application}
+\input{chapters/05-conclusions}
+% 文献按首次引用顺序自动生成；正文使用 \supercite{文献键}。
+% 示例文献随正式研究内容替换；不使用 \nocite{*} 列出未引用文献。
+% 若开始写作时暂不保留任何引用，可先注释下一行，添加真实引用后恢复。
+\printreferences
+\startappendices
+\input{backmatter/appendix} % 不需要附录时，以上两行一并注释。
+\makebackmatter
+\end{document}

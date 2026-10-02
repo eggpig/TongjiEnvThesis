@@ -1,0 +1,12 @@
+% !TeX program = xelatex
+% 单独交给装订店的书脊文字排版页，不并入电子论文。
+% 书脊宽度由最终页数和纸张厚度确定；本文件仅排文字，不预设成品宽度。
+\documentclass{tongji-env-master}
+\input{metadata}
+\begin{document}
+\pagestyle{empty}\hypersetup{pageanchor=false}
+\newgeometry{top=50mm,bottom=50mm,left=50mm,right=50mm}
+\noindent\makebox[\textwidth][c]{%
+  \parbox[t][197mm][s]{14bp}{\fangsong\fontsize{14bp}{16bp}\selectfont
+  \centering\ctitle\par\vfill\cauthor\par\vfill 同济大学\par}}
+\end{document}
